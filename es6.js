@@ -53,3 +53,41 @@ const joda = new Jedi();
 const darth = new Sith();
 console.log(joda.toString());
 console.log(darth.toString());
+
+class Util {
+  static increment(num) { return num + 1; }
+}
+console.log(Util.increment(5));
+
+// Get / set
+class O {
+  constructor() {
+    this.mx = 'initial';
+  }
+
+  get x() {
+    return this.mx;
+  }
+
+  set x(val) {
+    this.mx = val;
+  }
+}
+
+const o = new O();
+console.log(o.x);
+o.x = 'new value';
+console.log(o.x);
+
+// New looping syntax
+const arr = ['aaa', 'bbb', 'cccc'];
+// for (const i in arr) {
+//   console.log(i);
+// }
+
+for (const n of arr) {
+  console.log(n);
+}
+
+// Parse a string into an array
+console.log(Array.from('abs'));
