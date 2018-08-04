@@ -108,3 +108,25 @@ const getSumOfTwo = (valA, valB) => {
 };
 console.log(getSquare(5));
 console.log(getSumOfTwo(2, 2));
+
+// Use of const
+{
+  const a = 'initial value';
+  console.log(a);
+//   a = 'new value';
+//   console.log(a);
+}
+
+// Closures
+{
+  const add = (function () {
+    let counter = 0;
+    return function () {
+      counter += 1;
+      return counter;
+    };
+  }());
+  console.log(add());
+  console.log(add());
+  console.log(add());
+}
