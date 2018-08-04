@@ -91,3 +91,20 @@ for (const n of arr) {
 
 // Parse a string into an array
 console.log(Array.from('abs'));
+
+// Iterate over a map
+const m = new Map([...'abcd'].map(xx => [xx, xx + xx]));
+console.log(m);
+console.log(JSON.stringify([...m]));
+console.log(JSON.stringify([...m.keys()]));
+console.log(JSON.stringify([...m.values()]));
+console.log(JSON.stringify([...m.entries()]));
+
+// Fat arrow function
+const getSquare = numVal => numVal * numVal;
+const getSumOfTwo = (valA, valB) => {
+  const sum = valA + valB;
+  return sum;
+};
+console.log(getSquare(5));
+console.log(getSumOfTwo(2, 2));
